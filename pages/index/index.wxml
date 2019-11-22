@@ -1,0 +1,44 @@
+<view class="home">
+  <!-- 头部搜索 -->
+  <view class="header">
+    <view class="address">
+      河南省郑州市dsadasdsa
+    </view>
+    <view class="searc">
+      <image src="../../static/images/search.png"></image>
+      <input placeholder="搜索商品"></input>
+    </view>
+  </view>
+  <!-- 轮播区 -->
+  <view class="conter">
+    <swiper indicator-dots="true" autoplay="true">
+      <swiper-item wx:for="{{imglist}}" wx:key="{{index}}">
+        <image src="{{item.image_url}}"></image>
+      </swiper-item>
+    </swiper>
+  </view>
+  <!-- 居家餐厨分类区 -->
+  <scroll-view scroll-x="true">
+   <view class="cate">
+    <view class="cate-item" wx:for="{{cate}}" wx:key="{{index}}" bindtap="logBtn" data-id="{{index}}">
+      <image src="{{item.icon_url}}"></image>
+      <text>{{item.name}}</text>
+    </view>
+  </view>
+</scroll-view>
+ 
+  <!-- 新品首发 -->
+  <scroll-view scroll-x="true" >
+    <view class="sc">
+      <view class="sc-item" bindtap="tiaozhuan" data-id="{{item.id}}" wx:for="{{newGoods}}" wx:key="{{index}}">
+        <image src="{{item.list_pic_url}}"></image>
+        <text class="title">{{item.name}}</text>
+        <text class="dosc">{{item.goods_brief}}</text>
+        <text class="price">￥{{item.retail_price}}</text>
+      </view>
+    </view>
+  </scroll-view>
+
+<!-- 商品 -->
+<pont wx:for="{{allProducts}}" mydata="{{item}}" wx:key="{{index}}"/>
+</view>

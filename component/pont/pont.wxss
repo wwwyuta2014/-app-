@@ -1,0 +1,28 @@
+/* component/pont/pont.wxss */
+
+.product .title {
+  margin-top: 10rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150rpx;
+  background: #999;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.list .item {
+  display: flex;
+  width: 48%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.list .item image {
+  width: 300rpx;
+  height: 300rpx;
+}

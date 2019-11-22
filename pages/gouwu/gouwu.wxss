@@ -1,0 +1,132 @@
+/* pages/gouwu/gouwu.wxss */
+
+.brief {
+  display: flex;
+  padding: 0 10rpx;
+  background: #ededed;
+  justify-content: space-between;
+  height: 92prx;
+}
+
+.br-item {
+  display: flex;
+  align-items: center;
+  height: 120rpx;
+}
+
+.br-item .circle {
+  width: 15rpx;
+  height: 15rpx;
+  border-radius: 50%;
+  border: 2rpx solid #e9232c;
+  margin: 0 5rpx;
+}
+
+.size {
+  font-size: 30rpx;
+}
+
+/* 购物车布局 */
+
+.c-product {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.p-left {
+  display: flex;
+  align-items: center;
+  margin-top: 15rpx;
+}
+
+.desc {
+  display: flex;
+}
+
+.shuliang {
+  display: flex;
+  align-items: center;
+  margin-left: 100rpx;
+}
+
+/* 删除商品 */
+
+.splic {
+  position: absolute;
+  width: 100rpx;
+  background: #b4282d;
+  height: 166rpx;
+  line-height: 166rpx;
+  text-align: center;
+  right: -166rpx;
+
+}
+
+.desc image {
+  height: 180rpx;
+  width: 180rpx;
+  background: #ededed;
+}
+
+.jianjie {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 250rpx;
+}
+
+.select {
+  height: 34rpx;
+  width: 34rpx;
+  background: url("http://nos.netease.com/mailpub/hxm/yanxuan-wap/p/20150730/style/img/icon-normal/checkbox-0e09baa37e.png") no-repeat center center;
+  background-size: 34rpx 34rpx;
+  margin: 0 20rpx;
+  /* background: #0999 */
+}
+
+.active {
+  height: 34rpx;
+  width: 34rpx;
+  background: url("http://nos.netease.com/mailpub/hxm/yanxuan-wap/p/20150730/style/img/icon-normal/checkbox-checked-822e54472a.png") no-repeat center center;
+  background-size: 34rpx 34rpx;
+  margin: 0 20rpx;
+}
+
+/* 下单 */
+
+.he {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 0;
+  height: 100rpx;
+  width: 100%;
+  background: #ededed;
+}
+
+.box_left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box_right {
+  color: #b4282d;
+  display: flex;
+  align-items: center;
+}
+
+.money {
+  margin-right: 20rpx;
+}
+
+.box_right .yes {
+  display: flex;
+  color: #fff;
+  width: 160rpx;
+  height: 100%;
+  background: #b4282d;
+  align-items: center;
+  justify-content: center;
+}

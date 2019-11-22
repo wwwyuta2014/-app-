@@ -1,0 +1,9 @@
+<!--pages/dome/dome.wxml-->
+<view class="topic">
+  <view class="topic-item" wx:for="{{topres}}" wx:key="{{index}}">
+    <image src="{{item.scene_pic_url}}"></image>
+    <text>{{item.title}}</text>
+    <text>{{item.subtitle}}</text>
+    <text>￥{{item.price_info}}</text>
+  </view>
+</view>

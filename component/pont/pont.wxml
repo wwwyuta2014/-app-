@@ -1,0 +1,11 @@
+<!--component/pont/pont.wxml-->
+<view class="product">
+  <view class="title">{{mydata.name}}好物</view>
+  <view class="list">
+    <view class="item" wx:for="{{mydata.goodsList}}" wx:key="{{index}}">
+      <image src="{{item.list_pic_url}}"></image>
+      <text>{{item.name}}</text>
+      <text>￥{{item.retail_price}}</text>
+    </view>
+  </view>
+</view>

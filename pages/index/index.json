@@ -1,0 +1,6 @@
+{ 
+  "usingComponents":{
+      "pont":"../../component/pont/pont"
+  },
+  "enablePullDownRefresh": true
+}

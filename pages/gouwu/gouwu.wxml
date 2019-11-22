@@ -1,0 +1,49 @@
+<!--pages/gouwu/gouwu.wxml-->
+<view class="cart">
+  <!-- 说明性文字 -->
+  <view class="brief">
+    <view class="br-item">
+      <view class="circle"></view>
+      <view class="size">30天无忧退货</view>
+    </view>
+    <view class="br-item">
+      <view class="circle"></view>
+      <view class="size">48小时无忧退款</view>
+    </view>
+    <view class="br-item">
+      <view class="circle"></view>
+      <view class="size">满88元减20元</view>
+    </view>
+  </view>
+  <!-- 购物车 -->
+  <view class="content">
+    <view data-index="{{index}}" animation="{{item.animationData}}" class="c-product" wx:for="{{cartList}}" wx:key="{{index}}" bindtouchstart="mystart" bindtouchmove="mymove" bindtouchend="myend">
+      <view class="p-left">
+        <view class="{{item.isShow?'active':'select'}}" bindtap="select" data-index="{{index}}"></view>
+        <view class="desc">
+          <image src="{{item.list_pic_url}}"></image>
+          <view class="jianjie">
+            <text class="title">{{item.goods_name}}</text>
+            <text class="money">{{item.retail_price}}</text>
+          </view>
+          <view class="shuliang">X{{item.number}}</view>
+           <view class="splic" data-id="{{item.id}}" bindtap="deleteProduct" data-index="{{index}}">删除</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 结算 -->
+  <view class="he">
+    <view class="box_left">
+      <view class="{{ax?'active':'select'}}" bindtap="quanxuan"></view>
+      <view class="selects">
+        <text>全选({{quanxuan}})</text>
+      </view>
+    </view>
+    <view class="box_right">
+      <text class="money">￥{{zongmoney}}</text>
+      <text class="yes">下单</text>
+    </view>
+  </view>
+</view>

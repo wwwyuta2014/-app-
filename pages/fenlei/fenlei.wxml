@@ -1,0 +1,31 @@
+<!--pages/fenlei/fenlei.wxml-->
+<view class="fnelei">
+  <!-- 头部 -->
+  <view class="tou">
+    <view class="cate-search">
+      <image src="../../static/images/search.png"></image>
+      <input placeholder="商品搜索,共239款好物"></input>
+    </view>
+  </view>
+  <!-- 内容 -->
+  <view class="content">
+    <!-- left -->
+    <scroll-view class="content-left" scroll-y="true">
+      <view bindtap="seleceOne"  data-id="{{item.id}}" data-index="{{index}}" class="{{activeIndex===index?'mv-item active':'mv-item'}}" wx:for="{{list}}" wx:key="{{index}}">
+        {{item.name}}
+      </view>
+    </scroll-view>
+
+    <!-- 右边 -->
+    <scroll-view class="content-right" scroll-y="true">
+      <image src="{{rigthList.banner_url}}"></image>
+      <view class="fl">--{{rigthList.name}}分类--</view>
+      <view class="nwap-right">
+        <view class="rg-item" wx:for="{{rigthList.subList}}" wx:key="{{index}}">
+          <image src="{{item.wap_banner_url}}"></image>
+          <text>{{item.name}}</text>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

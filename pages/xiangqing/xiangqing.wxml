@@ -1,0 +1,54 @@
+<!--pages/xiangqing/xiangqing.wxml-->
+<view class="datali">
+  <!-- 轮播 -->
+  <view class="top">
+    <swiper indicator-dots="true" autoplay="true">
+      <swiper-item class="content" wx:for="{{listArr.gallery}}" wx:key="{{index}}">
+        <image src="{{item.img_url}}"></image>
+      </swiper-item>
+    </swiper>
+    <button class="share" open-type="share">分享商品</button>
+  </view>
+
+  <view class="GL" bindtap="isShowModul">
+    <text>请选择规格和数量</text>
+    <text>></text>
+  </view>
+
+  <!-- 购物车 -->
+  <view class="cart">
+    <view class="start">
+      <image src="//inews.gtimg.com/newsapp_ls/0/10773310496_640330/0"></image>
+    </view>
+    <view class="shop">
+      <image src="//inews.gtimg.com/newsapp_ls/0/10773310496_640330/0"></image>
+    </view>
+    <view class="toMoney">立即购买</view>
+    <view class="toCart" bindtap="joinCart">加入购物车</view>
+  </view>
+  <!-- 蒙层 -->
+  <view class="modal" >
+    <view class="selevt-product" animation="{{animationData}}">
+      <!-- 上面 -->
+      <view class="sp-top">
+        <view class="t-left">
+          <image src="{{money.primary_pic_url}}"></image>
+          <view class="t-l-v">
+            <text>价格￥{{money.retail_price}}</text>
+            <text>请选择数量</text>
+          </view>
+        </view>
+        <view class="t-right" bindtap="isShowmc">X</view>
+      </view>
+      <view class="sp-bottom">
+        <view>数量</view>
+        <view class="num">
+          <view class="sub" bindtap="jianshao">-</view>
+          <input class="text" type="number" bindblur="setValue" value="{{arr}}"></input>
+          <view class="add" bindtap="zengjia">+</view>
+        </view>
+      </view>
+    </view>
+    <view class="mc" wx:if="{{isShow}}" bindtap="isShowmc"></view>
+  </view>
+</view>

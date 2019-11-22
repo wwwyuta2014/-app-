@@ -1,0 +1,14 @@
+/* pages/dome/dome.wxss */
+
+.topic-item {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+.topic-item image{
+  width: 100%;
+}
+.topic-item{
+  text-align: center
+}
